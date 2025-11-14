@@ -238,14 +238,3 @@ GitHub: [@Madhu-712](https://github.com/Madhu-712)
 
 > *A fully automated multi-agent workflow for international medical facilitation — from document analysis to travel planning to treatment coordination.*
 
-```
-
----
-
-If you'd like, I can also:  
-✅ generate a project banner image  
-✅ add workflow diagrams or sequence flows  
-✅ convert this README into a GitHub Pages site  
-
-Just tell me!
-```
