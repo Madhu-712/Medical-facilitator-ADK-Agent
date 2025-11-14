@@ -85,15 +85,75 @@ def extract_patientinfo(patientsinfo_file: str,Patientid: str) -> str:
         summary_output += chunk.text
     return summary_output
 
+
+
+import os
+from PIL import Image # Pillow library for image handling
+
+def analyze_xray_image(image_path: str) -> dict:
+    """
+    Reads an X-ray image file and returns a simulated description and
+    severity assessment. This function is a conceptual placeholder
+    for actual AI-driven medical image analysis.
+
+    Args:
+        image_path (str): The file path to the X-ray image (e.g., .png, .jpg).
+
+    Returns:
+        dict: A dictionary containing a simulated description and assessment,
+              or an error message if the image cannot be processed.
+    """
+    if not os.path.exists(image_path):
+        return {"error": f"Image file not found: {image_path}"}
+
+    try:
+        # Step 1: Read the image (conceptual)
+        # In a real scenario, this would involve loading, preprocessing,
+        # and converting to a format suitable for an AI model.
+        with Image.open(image_path) as img:
+            # Basic info for simulation; not actually used for analysis here.
+            print(f"Simulating analysis for: {image_path} (Size: {img.size}, Mode: {img.mode})")
+
+        # Step 2: Simulate AI analysis (conceptual)
+        # This part would be replaced by calling a specialized AI model
+        # (e.g., a deep learning model for medical imaging) that
+        # has been trained to interpret X-rays.
+        # For this example, we provide a fixed, mock output.
+        simulated_description = "The simulated X-ray image appears to show " \
+                                "evidence of a mild consolidation in the right lung base."
+        simulated_severity = "Mild"
+        simulated_recommendation = "Consider follow-up with a medical professional for actual diagnosis."
+
+        return {
+            "status": "success",
+            "description": simulated_description,
+            "severity": simulated_severity,
+            "recommendation": simulated_recommendation
+        }
+
+    except FileNotFoundError:
+        return {"error": f"Image file not found: {image_path}"}
+    except Exception as e:
+        return {"error": f"An unexpected error occurred: {e}"}
+
+
+
+
+
+
+
 DATA_EXTRACTOR_INSTRUCTION = """
     You are a information extractor agent that helps with extracting 
-    details about patient from user request. You will have below information to extract from /home/madhu_712/medagent/subagents/data/patientsinfo.pdf  document.
+    details about patient from user request. You will have below information to extract from (/home/madhu_712/medagent/subagents/data/patientsinfo.pdf)  document.
+    You also analyze the uploaded x-ray image from path (/home/madhu_712/medagent/subagents/data/xray.png) and generate summary description of image and severity of disease .
     1) patient name 
     2) patient id
     3) consultation details
     4) diagnosis info
     5) surgical procedures
     6) medical history
+
+    
     """
 
 
@@ -109,6 +169,6 @@ data_retriver_agent = Agent(
    description="""Agent that reviews the patients info from the pdf doc and retrives the specific content about patient mentioned in the query.""",
    instruction= DATA_EXTRACTOR_INSTRUCTION,
    generate_content_config=types.GenerateContentConfig(temperature=0.0),
-   tools=[extract_patientinfo],
+   tools=[extract_patientinfo, analyze_xray_image],
    
 )
