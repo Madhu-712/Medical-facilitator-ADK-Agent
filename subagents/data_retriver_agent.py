@@ -2,6 +2,8 @@
 import google.cloud.aiplatform as aiplatform
 from google import genai
 from google.genai import types
+
+from google.adk import Agent
 from typing import Optional
 from dotenv import load_dotenv
 from pathlib import Path
@@ -157,8 +159,6 @@ DATA_EXTRACTOR_INSTRUCTION = """
     """
 
 
-from google.genai import types
-from google.adk import Agent
 
 
 
