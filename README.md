@@ -1,6 +1,8 @@
 # Medical-facilitator-ADK-Agent
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1b4a2a3d-265d-44cb-b7c9-cdeaf961e42b" />
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/930d7ac6-0c04-491c-9655-b5d8fc84b4e2" />
+
 
 # 🏥 Medical-Facilitator-ADK-Agent 
 **Multi-Agent Medical Facilitation System using ADK + MCP**
