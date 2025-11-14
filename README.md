@@ -1,7 +1,8 @@
 # Medical-facilitator-ADK-Agent
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4ec2b129-44e4-4943-960f-86094add1e12" />
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/930d7ac6-0c04-491c-9655-b5d8fc84b4e2" />
+
 
 
 # 🏥 Medical-Facilitator-ADK-Agent 
