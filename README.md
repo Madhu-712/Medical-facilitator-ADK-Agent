@@ -143,23 +143,41 @@ Example outputs include:
 
 ## 📁 Project Structure
 
-```
-
-Medical-facilitator-ADK-Agen/
+Medical-facilitator-ADK-Agent/
+├── agent.py                      # Main orchestrator for ADK agents
+├── prompts.py                    # System prompts + agent instructions
+├── tools.py                      # Utility functions, modular tools, helpers
+├── .env                          # Environment variables
+├── __init__.py                   # Package initializer
 │
-├── agents/
-│   ├── data_retriever.py
-│   └── medical_facilitator.py
+├── subagent/
+│   ├── __init__.py               # Subagent module initializer
+│   │
+│   ├── data/                     # Internal test resource directory
+│   │   └── patientsinfo.pdf      # Sample patient data used by retriever
+│   │
+│   ├── data_retriver_agent.py    # PDF & X-ray interpreter (multimodal extraction)
+│   └── medical_facilitator_agent.py
+│                                 # Medical summarization + concierge logic
 │
-├── docs/
-├── patientsinfo.pdf
-├── main.py
-├── requirements.txt
-└── README.md
+├── Architecturediagrams/         # Architecture diagrams (PNG, SVG, PDF)
+│   ├── architecture.png
+│   ├── architecture.svg
+│   ├── architecture.pdf
+│   ├── multi_agent.png
+│   ├── workflow.png
+│   └── ...
+│
+├── reports/                      # Final generated medical summaries
+│   ├── post-diagnosis-report-patient_summary.pdf
+│   ├── patient_summary.pdf
+│   └── ...
+│
+├── outputs/                      # (Optional: For intermediate data)
+│
+├── requirements.txt              # Python dependencies
+└── README.md                     # Main documentation
 
-````
-
----
 
 ## 🚀 Getting Started
 
