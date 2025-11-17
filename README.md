@@ -207,15 +207,6 @@ python main.py
 4. Final summary or report is uploaded to the **GCS `report-summary` bucket**
 
 ---
-
-## 🌐 Related Projects
-
-This repo’s structure follows a similar style to:
-👉 **Google-Maps-ADK–MCP-Agents**
-Ensuring consistency across your multi-agent open-source projects.
-
----
-
 ## 🤝 Contributing
 
 1. Fork the repo
