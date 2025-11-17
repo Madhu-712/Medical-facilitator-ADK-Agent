@@ -144,38 +144,71 @@ Example outputs include:
 ## 📁 Project Structure
 
 Medical-facilitator-ADK-Agent/
+
 ├── agent.py                      # Main orchestrator for ADK agents
+
 ├── prompts.py                    # System prompts + agent instructions
+
 ├── tools.py                      # Utility functions, modular tools, helpers
+
+
 ├── .env                          # Environment variables
+
 ├── __init__.py                   # Package initializer
+
 │
+
 ├── subagent/
+
 │   ├── __init__.py               # Subagent module initializer
+
 │   │
+
 │   ├── data/                     # Internal test resource directory
+
 │   │   └── patientsinfo.pdf      # Sample patient data used by retriever
+
 │   │
+
 │   ├── data_retriver_agent.py    # PDF & X-ray interpreter (multimodal extraction)
+
 │   └── medical_facilitator_agent.py
+
+
+
 │                                 # Medical summarization + concierge logic
+
 │
+
 ├── Architecturediagrams/         # Architecture diagrams (PNG, SVG, PDF)
+
 │   ├── architecture.png
+
 │   ├── architecture.svg
+
 │   ├── architecture.pdf
+
 │   ├── multi_agent.png
+
+
 │   ├── workflow.png
 │   └── ...
 │
+
 ├── reports/                      # Final generated medical summaries
+
 │   ├── post-diagnosis-report-patient_summary.pdf
+
+
 │   ├── patient_summary.pdf
 │   └── ...
 │
+
 ├── outputs/                      # (Optional: For intermediate data)
 │
+
 ├── requirements.txt              # Python dependencies
+
 └── README.md                     # Main documentation
 
 
@@ -183,8 +216,8 @@ Medical-facilitator-ADK-Agent/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/Madhu-712/Medical-facilitator-ADK-Agen.git
-cd Medical-facilitator-ADK-Agen
+git clone https://github.com/Madhu-712/Medical-facilitator-ADK-Agent.git
+cd Medical-facilitator-ADK-Agent
 ````
 
 ### 2️⃣ Create virtual environment
@@ -212,7 +245,7 @@ GOOGLE_APPLICATION_CREDENTIALS=credentials.json
 ### 5️⃣ Run the agent system
 
 ```bash
-python main.py
+adk web --port 8080
 ```
 
 ---
