@@ -279,6 +279,18 @@ Open-source under the **MIT License**.
 **Author:** Madhu
 GitHub: [@Madhu-712](https://github.com/Madhu-712)
 
+## Resources
+
+## Youtube video
+https://youtu.be/rHP1xBuwzxc
+
+## Medium blog
+https://medium.com/@madhu.712/how-an-adk-powered-multi-agent-system-is-transforming-medical-data-processing-patient-2b24822a572a
+
+## App deployment link:
+https://medical-facilitator-ai-demo-11279231310.us-west1.run.app/
+
+
 ---
 
 > *A fully automated multi-agent workflow for international medical facilitation — from document analysis to travel planning to treatment coordination.*
